@@ -5,8 +5,10 @@ const { createHandler } = require('graphql-http/lib/use/express')
 const schema = require("./schemas/schema")
 const connectDB = require('./config/db')
 const PORT = process.env.PORT || 3000;
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 
 // Databse connection
 
